@@ -86,7 +86,8 @@ public class RadarChartRenderer: LineScatterCandleRadarChartRenderer
         // draw filled
         if (dataSet.isDrawFilledEnabled)
         {
-            CGContextSetFillColorWithColor(context, dataSet.colorAt(0).CGColor)
+            //change for radar chart UI
+            CGContextSetFillColorWithColor(context, dataSet.UIColor.yellowColor().CGColor)
             CGContextSetAlpha(context, dataSet.fillAlpha)
             
             CGContextBeginPath(context)
@@ -97,7 +98,8 @@ public class RadarChartRenderer: LineScatterCandleRadarChartRenderer
         // draw the line (only if filled is disabled or alpha is below 255)
         if (!dataSet.isDrawFilledEnabled || dataSet.fillAlpha < 1.0)
         {
-            CGContextSetStrokeColorWithColor(context, dataSet.colorAt(0).CGColor)
+            //change for radar chart UI
+            CGContextSetStrokeColorWithColor(context, dataSet.UIColor.yellowColor().CGColor)
             CGContextSetLineWidth(context, dataSet.lineWidth)
             CGContextSetAlpha(context, 1.0)
             
@@ -183,14 +185,11 @@ public class RadarChartRenderer: LineScatterCandleRadarChartRenderer
         
         for var i = 0, xValCount = _chart.data!.xValCount; i < xValCount; i += xIncrements
         {
-            print("yRange==\(CGFloat(_chart.yRange) * factor)")
-            
+            //change for radar chart UI
             var dist = CGFloat(_chart.yRange) * factor
             if dist < 80.0{
                 dist = 80.0
             }
-            print("width==\(_chart.frame.size.width)")
-            print("dist==\(dist)")
             let p = ChartUtils.getPosition(center: center, dist: dist, angle: sliceangle * CGFloat(i) + rotationangle)
             
             //  let p = ChartUtils.getPosition(center: center, dist: CGFloat(_chart.yRange) * factor, angle: sliceangle * CGFloat(i) + rotationangle)

@@ -69,7 +69,10 @@ public class ChartDataSet: NSObject
         _yVals = yVals == nil ? [ChartDataEntry]() : yVals
         
         // default color
-        colors.append(UIColor(red: 140.0/255.0, green: 234.0/255.0, blue: 255.0/255.0, alpha: 1.0))
+      //  colors.append(UIColor(red: 140.0/255.0, green: 234.0/255.0, blue: 255.0/255.0, alpha: 1.0))
+        
+        //Change for radar UI
+        colors.append(UIColor(red: 109.0/255.0, green: 61.0/255.0, blue: 186.0/255.0, alpha: 1.0))
         
         self.calcMinMax(start: _lastStart, end: _lastEnd)
         self.calcYValueSum()
