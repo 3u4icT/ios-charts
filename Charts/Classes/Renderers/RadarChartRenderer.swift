@@ -183,7 +183,17 @@ public class RadarChartRenderer: LineScatterCandleRadarChartRenderer
         
         for var i = 0, xValCount = _chart.data!.xValCount; i < xValCount; i += xIncrements
         {
-            let p = ChartUtils.getPosition(center: center, dist: CGFloat(_chart.yRange) * factor, angle: sliceangle * CGFloat(i) + rotationangle)
+            print("yRange==\(CGFloat(_chart.yRange) * factor)")
+            
+            var dist = CGFloat(_chart.yRange) * factor
+            if dist < 80.0{
+                dist = 80.0
+            }
+            print("width==\(_chart.frame.size.width)")
+            print("dist==\(dist)")
+            let p = ChartUtils.getPosition(center: center, dist: dist, angle: sliceangle * CGFloat(i) + rotationangle)
+            
+            //  let p = ChartUtils.getPosition(center: center, dist: CGFloat(_chart.yRange) * factor, angle: sliceangle * CGFloat(i) + rotationangle)
             
             _webLineSegmentsBuffer[0].x = center.x
             _webLineSegmentsBuffer[0].y = center.y
