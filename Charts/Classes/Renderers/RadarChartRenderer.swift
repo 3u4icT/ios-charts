@@ -87,7 +87,7 @@ public class RadarChartRenderer: LineScatterCandleRadarChartRenderer
         if (dataSet.isDrawFilledEnabled)
         {
             //change for radar chart UI
-            CGContextSetFillColorWithColor(context, dataSet.UIColor.yellowColor().CGColor)
+            CGContextSetFillColorWithColor(context, _chart.contentGraphColor.CGColor)
             CGContextSetAlpha(context, dataSet.fillAlpha)
             
             CGContextBeginPath(context)
@@ -99,7 +99,7 @@ public class RadarChartRenderer: LineScatterCandleRadarChartRenderer
         if (!dataSet.isDrawFilledEnabled || dataSet.fillAlpha < 1.0)
         {
             //change for radar chart UI
-            CGContextSetStrokeColorWithColor(context, dataSet.UIColor.yellowColor().CGColor)
+            CGContextSetStrokeColorWithColor(context, _chart.contentGraphColor.CGColor)
             CGContextSetLineWidth(context, dataSet.lineWidth)
             CGContextSetAlpha(context, 1.0)
             

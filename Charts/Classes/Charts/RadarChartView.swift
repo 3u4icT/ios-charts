@@ -31,6 +31,9 @@ public class RadarChartView: PieRadarChartViewBase
     /// color for the web lines in between the lines that come from the center.
     public var innerWebColor = UIColor(red: 122/255.0, green: 122/255.0, blue: 122.0/255.0, alpha: 1.0)
     
+    //color of the data lines and filled space
+    public var contentGraphColor = UIColor(red: 108/255.0, green: 62/255.0, blue: 185.0/255.0, alpha: 1.0)
+    
     /// transparency the grid is drawn with (0.0 - 1.0)
     public var webAlpha: CGFloat = 150.0 / 255.0
     
