@@ -156,15 +156,15 @@ public class ChartYAxisRendererRadarChart: ChartYAxisRenderer
             return
         }
         
-        let labelFont = _yAxis.labelFont
-        let labelTextColor = _yAxis.labelTextColor
+       // let labelFont = _yAxis.labelFont
+      //  let labelTextColor = _yAxis.labelTextColor
         
-        let center = _chart.centerOffsets
-        let factor = _chart.factor
+      //  let center = _chart.centerOffsets
+      //  let factor = _chart.factor
         
         let labelCount = _yAxis.entryCount
         
-        let labelLineHeight = _yAxis.labelFont.lineHeight
+      //  let labelLineHeight = _yAxis.labelFont.lineHeight
         
         for (var j = 0; j < labelCount; j++)
         {
@@ -173,11 +173,11 @@ public class ChartYAxisRendererRadarChart: ChartYAxisRenderer
                 break
             }
             
-            let r = CGFloat(_yAxis.entries[j] - _yAxis.axisMinimum) * factor
+         //   let r = CGFloat(_yAxis.entries[j] - _yAxis.axisMinimum) * factor
             
-            let p = ChartUtils.getPosition(center: center, dist: r, angle: _chart.rotationAngle)
+        //    let p = ChartUtils.getPosition(center: center, dist: r, angle: _chart.rotationAngle)
             
-            let label = _yAxis.getFormattedLabel(j)
+          //  let label = _yAxis.getFormattedLabel(j)
             
             //changes for radar chart UI : Label is not required
             //ChartUtils.drawText(context: context, text: label, point: CGPoint(x: p.x + 10.0, y: p.y - labelLineHeight), align: .Left, attributes: [NSFontAttributeName: labelFont, NSForegroundColorAttributeName: labelTextColor])
